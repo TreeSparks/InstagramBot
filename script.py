@@ -8,11 +8,12 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.chrome.service import Service
 
 # Location of 'chromedriver.exe'
-PATH = "C:\\Program Files (x86)\\chromedriver.exe"
+PATH = Service("C:\\Program Files (x86)\\chromedriver.exe")
 
-browser = webdriver.Chrome(executable_path=PATH)
+browser = webdriver.Chrome(service=PATH)
 
 browser.get("https://www.instagram.com")
 
